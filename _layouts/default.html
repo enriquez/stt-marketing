@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ page.title }}</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <link rel="stylesheet" href="fontawesome/css/font-awesome.min.css">
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="fontawesome//css/font-awesome-ie7.min.css">
+    <![endif]-->
+
+    <link rel="stylesheet" href="datepicker/css/datepicker.css">
+
+    {% if page.style %}
+      <link href="{{ page.style }}" rel="stylesheet" media="screen">
+    {% endif %}
+    <!-- <link href="css/bootstrap-responsive.min.css" rel="stylesheet" media="screen"> -->
+  </head>
+  <body>
+    {{ content }}
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="datepicker/js/bootstrap-datepicker.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    {% if page.script %}
+      <script src="{{ page.script }}"></script>
+    {% endif %}
+  </body>
+</html>
